@@ -1,4 +1,5 @@
 #!/bin/bash
+# comment
 set  -e
 VERSION="v2.8.0"
 URL="https://github.com/datso/react-native-pjsip-builder/releases/download/${VERSION}/release.tar.gz"
