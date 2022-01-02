@@ -225,6 +225,24 @@ export default class Endpoint extends EventEmitter {
             });
         });
     }
+    
+    /**
+     * same as delete account, but avoid the account.getId() function.
+     *
+     * @param {Int} id
+     * @returns {Promise}
+     */
+    deleteAccountById(id) {
+        return new Promise(function(resolve, reject) {
+            NativeModules.PjSipModule.deleteAccount(id, (successful, data) => {
+                if (successful) {
+                    resolve(data);
+                } else {
+                    reject(data);
+                }
+            });
+        });
+    }
 
     /**
      * Make an outgoing call to the specified URI.
