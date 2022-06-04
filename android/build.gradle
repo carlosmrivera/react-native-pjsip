@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
+    compile 'com.facebook.react:react-native:0.41.2'
     compile "com.google.code.gson:gson:2.+"
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
